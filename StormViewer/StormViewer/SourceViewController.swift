@@ -36,4 +36,12 @@ class SourceViewController: NSViewController, NSTableViewDelegate, NSTableViewDa
         vw.textField?.stringValue = pictures[row]
         return vw
     }
+    
+    func tableViewSelectionDidChange(_ notification: Notification) {
+        guard tableView.selectedRow != -1 else { return }
+        guard let splictVC = parent as? NSSplitViewController else { return }
+        if let detail = splictVC.children[1] as? DetailViewController {
+            detail.imageSelected(name: pictures[tableView.selectedRow])
+        }
+    }
 }

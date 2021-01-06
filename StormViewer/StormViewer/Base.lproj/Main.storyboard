@@ -159,13 +159,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="290" height="600"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <scrollView autohidesScrollers="YES" horizontalLineScroll="80" horizontalPageScroll="10" verticalLineScroll="80" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YgX-wD-PIw">
+                            <scrollView autohidesScrollers="YES" horizontalLineScroll="40" horizontalPageScroll="10" verticalLineScroll="40" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YgX-wD-PIw">
                                 <rect key="frame" x="0.0" y="0.0" width="290" height="600"/>
                                 <clipView key="contentView" drawsBackground="NO" id="zDG-lI-0nx">
                                     <rect key="frame" x="1" y="1" width="288" height="598"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" tableStyle="sourceList" selectionHighlightStyle="sourceList" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="80" viewBased="YES" id="tm1-Em-pNc">
+                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" tableStyle="sourceList" selectionHighlightStyle="sourceList" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="40" viewBased="YES" id="tm1-Em-pNc">
                                             <rect key="frame" x="0.0" y="0.0" width="288" height="598"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <size key="intercellSpacing" width="17" height="0.0"/>
@@ -184,26 +184,28 @@
                                                     </textFieldCell>
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
-                                                        <tableCellView id="egx-sH-OrI">
-                                                            <rect key="frame" x="18" y="0.0" width="251" height="24"/>
+                                                        <tableCellView id="WIL-Qk-Wt0">
+                                                            <rect key="frame" x="18" y="0.0" width="251" height="30"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
-                                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="8Nt-gy-mZF">
-                                                                    <rect key="frame" x="0.0" y="-2" width="251" height="28"/>
-                                                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="z7m-ak-pgn">
+                                                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R9z-sL-VWv">
+                                                                    <rect key="frame" x="40" y="0.0" width="226" height="30"/>
+                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="8kP-VL-8mY">
                                                                         <font key="font" metaFont="system" size="24"/>
                                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                     </textFieldCell>
                                                                 </textField>
+                                                                <imageView wantsLayer="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wwm-hr-Ddj">
+                                                                    <rect key="frame" x="0.0" y="-1" width="32" height="32"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSActionTemplate" catalog="system" id="Jy1-n8-Std"/>
+                                                                </imageView>
                                                             </subviews>
-                                                            <constraints>
-                                                                <constraint firstItem="8Nt-gy-mZF" firstAttribute="centerY" secondItem="egx-sH-OrI" secondAttribute="centerY" id="e1s-uG-xcg"/>
-                                                                <constraint firstItem="8Nt-gy-mZF" firstAttribute="centerX" secondItem="egx-sH-OrI" secondAttribute="centerX" id="ozp-I8-DFM"/>
-                                                                <constraint firstItem="8Nt-gy-mZF" firstAttribute="leading" secondItem="egx-sH-OrI" secondAttribute="leading" constant="2" id="sXt-6z-Rpj"/>
-                                                            </constraints>
                                                             <connections>
-                                                                <outlet property="textField" destination="8Nt-gy-mZF" id="J5w-mS-C40"/>
+                                                                <outlet property="imageView" destination="Wwm-hr-Ddj" id="oOb-p4-CEq"/>
+                                                                <outlet property="textField" destination="R9z-sL-VWv" id="XHd-cW-RCm"/>
                                                             </connections>
                                                         </tableCellView>
                                                     </prototypeCellViews>
@@ -271,4 +273,7 @@
             <point key="canvasLocation" x="758.5" y="814"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="NSActionTemplate" catalog="system" width="15" height="15"/>
+    </resources>
 </document>
